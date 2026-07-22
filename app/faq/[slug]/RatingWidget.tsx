@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Star } from "@/components/Icons";
+import { Star, CheckCircle } from "@/components/Icons";
 import { supabase } from "@/lib/supabase";
 import { motion } from "framer-motion";
 import clsx from "clsx";
@@ -52,11 +52,15 @@ export default function RatingWidget({ articleSlug }: { articleSlug: string }) {
         <div className="h-10"></div>
       ) : submitted ? (
         <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="text-green-600 dark:text-green-400 font-medium py-2"
+          className="flex flex-col items-center py-2"
         >
-          Terima kasih atas penilaianmu! 🎉
+          <div className="w-12 h-12 bg-green-500/10 text-green-500 dark:text-green-400 rounded-full flex items-center justify-center mb-3">
+            <CheckCircle size={24} />
+          </div>
+          <p className="text-foreground font-semibold text-base mb-1">Terima kasih atas penilaianmu!</p>
+          <p className="text-xs text-muted-foreground">Masukanmu sangat berarti bagi pengembangan kampus kami.</p>
         </motion.div>
       ) : (
         <div className="flex justify-center gap-2">
