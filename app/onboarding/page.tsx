@@ -91,7 +91,7 @@ export default function OnboardingPage() {
           </div>
         </div>
 
-        <div className="mt-auto pt-6 pb-safe">
+        <div className="mt-2 pt-6 pb-safe">
           <button
             type="submit"
             disabled={!faculty || !program}
