@@ -30,7 +30,7 @@ export default function RootLayout({
     <html
       lang="id"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
     >
       <body className="min-h-screen flex flex-col bg-background text-foreground pb-16 sm:pb-0">
         <Providers>

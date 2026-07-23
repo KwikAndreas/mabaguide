@@ -13,30 +13,44 @@ export interface FAQData {
   program: string;
 }
 
+function getAllMarkdownFiles(dirPath: string, arrayOfFiles: string[] = []) {
+  const files = fs.readdirSync(dirPath);
+
+  files.forEach((file) => {
+    const fullPath = path.join(dirPath, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      arrayOfFiles = getAllMarkdownFiles(fullPath, arrayOfFiles);
+    } else if (file.endsWith(".md")) {
+      arrayOfFiles.push(fullPath);
+    }
+  });
+
+  return arrayOfFiles;
+}
+
 export function getAllFAQs(): FAQData[] {
   if (!fs.existsSync(contentDirectory)) {
     return [];
   }
 
-  const fileNames = fs.readdirSync(contentDirectory);
-  const allFAQsData = fileNames
-    .filter((fileName) => fileName.endsWith(".md"))
-    .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, "");
-      const fullPath = path.join(contentDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
+  const allFiles = getAllMarkdownFiles(contentDirectory);
+  
+  const allFAQsData = allFiles.map((fullPath) => {
+    const relativePath = path.relative(contentDirectory, fullPath);
+    const slug = relativePath.replace(/\\/g, '/').replace(/\.md$/, "");
+    
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const matterResult = matter(fileContents);
 
-      const matterResult = matter(fileContents);
-
-      return {
-        slug,
-        title: matterResult.data.title || "Untitled",
-        category: matterResult.data.category || "Uncategorized",
-        faculty: matterResult.data.faculty || "General",
-        program: matterResult.data.program || "General",
-        content: matterResult.content,
-      };
-    });
+    return {
+      slug,
+      title: matterResult.data.title || "Untitled",
+      category: matterResult.data.category || "Uncategorized",
+      faculty: matterResult.data.faculty || "General",
+      program: matterResult.data.program || "General",
+      content: matterResult.content,
+    };
+  });
 
   return allFAQsData;
 }

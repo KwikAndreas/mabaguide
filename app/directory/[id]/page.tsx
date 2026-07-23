@@ -79,12 +79,12 @@ export default async function DirectoryDetailPage({ params }: { params: Promise<
               <div className="space-y-4">
                 {item.socialMedia && (
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                       <Globe size={16} />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs text-muted-foreground">Sosial Media</p>
-                      <a href={item.socialMedia} target="_blank" rel="noreferrer" className="text-sm font-semibold text-primary hover:underline">
+                      <a href={item.socialMedia} target="_blank" rel="noreferrer" className="text-sm font-semibold text-primary hover:underline truncate block">
                         {item.socialMedia.replace("https://", "")}
                       </a>
                     </div>
@@ -93,12 +93,12 @@ export default async function DirectoryDetailPage({ params }: { params: Promise<
                 
                 {item.contactPerson && (
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center text-green-500">
+                    <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 flex-shrink-0">
                       <Phone size={16} />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs text-muted-foreground">Contact Person</p>
-                      <p className="text-sm font-semibold text-foreground">{item.contactPerson}</p>
+                      <p className="text-sm font-semibold text-foreground truncate">{item.contactPerson}</p>
                     </div>
                   </div>
                 )}

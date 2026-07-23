@@ -88,7 +88,7 @@ function SearchContent() {
           <div className="space-y-3">
             <h2 className="text-sm font-semibold text-muted-foreground mb-4 uppercase tracking-wider">Hasil Pencarian ({results.length})</h2>
             {results.map((item, i) => (
-              <Link key={i} href={`/faq/${item.slug}`}>
+              <Link key={i} href={item.type === 'directory' ? `/directory/${item.slug}` : `/faq/${item.slug}`}>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ function SearchContent() {
                   className="bg-card border border-border rounded-xl p-4 flex items-center justify-between group hover:border-primary/50 transition-all shadow-sm mb-3"
                 >
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-secondary mb-1 block">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-primary mb-1 block">
                       {item.category}
                     </span>
                     <h3 className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">

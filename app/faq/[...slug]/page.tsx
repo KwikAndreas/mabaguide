@@ -1,6 +1,7 @@
 import { getAllFAQs, getFAQBySlug } from "@/lib/markdown";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import rehypeSlug from "rehype-slug";
 import Link from "next/link";
 import { ChevronLeft } from "@/components/Icons";
 import RatingWidget from "./RatingWidget";
@@ -8,13 +9,14 @@ import RatingWidget from "./RatingWidget";
 export async function generateStaticParams() {
   const faqs = getAllFAQs();
   return faqs.map((faq) => ({
-    slug: faq.slug,
+    slug: faq.slug.split('/'), // Next.js expects an array for [...slug]
   }));
 }
 
-export default async function FAQPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function FAQPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const resolvedParams = await params;
-  const faq = getFAQBySlug(resolvedParams.slug);
+  const slugPath = resolvedParams.slug.join('/');
+  const faq = getFAQBySlug(slugPath);
 
   if (!faq) {
     notFound();
@@ -32,9 +34,8 @@ export default async function FAQPage({ params }: { params: Promise<{ slug: stri
 
       <main className="flex-1 px-6 py-8">
         <h1 className="text-3xl font-bold mb-6 text-foreground leading-tight">{faq.title}</h1>
-        
-        <article className="prose prose-sm dark:prose-invert max-w-none prose-headings:text-primary prose-a:text-secondary mb-12">
-          <ReactMarkdown>{faq.content}</ReactMarkdown>
+        <article className="prose prose-sm dark:prose-invert max-w-none prose-headings:text-foreground prose-h2:text-primary prose-a:text-primary prose-a:underline prose-a:underline-offset-4 prose-a:decoration-primary/40 hover:prose-a:decoration-primary prose-a:transition-all prose-li:marker:text-primary prose-strong:text-foreground mb-12">
+          <ReactMarkdown rehypePlugins={[rehypeSlug]}>{faq.content}</ReactMarkdown>
         </article>
 
         {/* Feedback Widget */}

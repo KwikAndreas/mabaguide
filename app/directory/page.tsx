@@ -47,7 +47,7 @@ export default function DirectoryPage() {
           </div>
         </header>
 
-        <main className="flex-1 px-6 py-6">
+        <main className="flex-1 px-6 py-4">
           <AnimatePresence mode="wait">
             {activeCategoryIndex === null ? (
               <motion.div
@@ -66,7 +66,7 @@ export default function DirectoryPage() {
                         setActiveCategoryIndex(idx);
                         setSearchQuery(""); // Reset search when opening category
                       }}
-                      className="flex flex-col items-center justify-center text-center bg-card border border-border p-6 rounded-2xl shadow-sm hover:border-primary/50 hover:shadow-md transition-all group min-h-[200px]"
+                      className="flex flex-col items-center justify-center text-center bg-card border border-border p-4 rounded-2xl shadow-sm hover:border-primary/50 hover:shadow-md transition-all group min-h-[180px]"
                     >
                       <div className={`p-4 rounded-full ${cat.bg} ${cat.color} mb-4 group-hover:scale-110 transition-transform`}>
                         <IconComponent size={36} />
