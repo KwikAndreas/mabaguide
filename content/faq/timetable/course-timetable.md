@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Course Timetable adalah fitur yang menampilkan jadwal mata kuliah mahasiswa, baik harian maupun mingguan. Fitur ini digunakan untuk mengecek jam kuliah, ruang kelas, dan dosen pengajar dari setiap mata kuliah yang sedang diambil.
 
-![Course Timetable](/images/Portal/Timetable.png)
+![Course Timetable](/images/portal/Timetable.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

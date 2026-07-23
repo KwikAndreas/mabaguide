@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Thesis Exam Timetable adalah fitur yang menampilkan jadwal sidang skripsi mahasiswa tingkat akhir.
 
-![Thesis Exam Timetable](/images/Portal/Timetable.png)
+![Thesis Exam Timetable](/images/portal/Timetable.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

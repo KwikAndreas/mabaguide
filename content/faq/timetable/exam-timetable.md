@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Exam Timetable adalah fitur yang menampilkan jadwal ujian mahasiswa, seperti UTS (Ujian Tengah Semester) dan UAS (Ujian Akhir Semester). Fitur ini penting untuk memastikan mahasiswa tidak salah tanggal atau melewatkan sesi ujian.
 
-![Exam Timetable](/images/Portal/Timetable.png)
+![Exam Timetable](/images/portal/Timetable.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

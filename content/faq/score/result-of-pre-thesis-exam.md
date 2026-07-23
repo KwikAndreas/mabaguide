@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Result of Pre-Thesis Exam adalah fitur yang menampilkan hasil ujian Pra Sidang, yaitu tahap sebelum sidang skripsi akhir.
 
-![Result of Pre-Thesis](/images/Portal/Score.png)
+![Result of Pre-Thesis](/images/portal/Score.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

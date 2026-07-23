@@ -9,7 +9,7 @@ program: "General"
 
 Current Score Report adalah fitur yang menampilkan nilai mata kuliah pada semester yang sedang berjalan. Fitur ini digunakan mahasiswa untuk memantau progres nilai sebelum periode nilai resmi diumumkan.
 
-![Current Score Report](/images/Portal/Score.png)
+![Current Score Report](/images/portal/Score.png)
 
 ### Langkah-langkah
 

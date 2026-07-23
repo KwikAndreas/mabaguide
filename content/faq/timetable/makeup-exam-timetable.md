@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Make-Up Exam Timetable adalah fitur yang menampilkan jadwal ujian susulan bagi mahasiswa yang berhalangan mengikuti ujian pada jadwal reguler.
 
-![Make-Up Exam Timetable](/images/Portal/Timetable.png)
+![Make-Up Exam Timetable](/images/portal/Timetable.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

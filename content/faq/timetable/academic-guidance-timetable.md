@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Academic Guidance Timetable adalah fitur yang menampilkan jadwal bimbingan akademik antara mahasiswa dengan dosen wali (dosen pembimbing akademik).
 
-![Academic Guidance Timetable](/images/Portal/Timetable.png)
+![Academic Guidance Timetable](/images/portal/Timetable.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

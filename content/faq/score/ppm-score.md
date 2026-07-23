@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 PPM Score adalah fitur yang menampilkan nilai kegiatan Praktikum/PPM yang telah diikuti mahasiswa.
 
-![PPM Score](/images/Portal/Score.png)
+![PPM Score](/images/portal/Score.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

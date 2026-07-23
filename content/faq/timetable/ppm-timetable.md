@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 PPM Timetable adalah fitur yang menampilkan jadwal kegiatan Praktikum/PPM mahasiswa. Fitur ini digunakan untuk mengecek sesi praktikum yang harus diikuti sesuai mata kuliah terkait.
 
-![PPM Timetable](/images/Portal/Timetable.png)
+![PPM Timetable](/images/portal/Timetable.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

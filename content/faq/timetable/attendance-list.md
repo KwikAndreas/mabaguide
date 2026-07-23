@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Attendance List adalah fitur yang menampilkan rekap kehadiran mahasiswa untuk setiap mata kuliah. Fitur ini berguna untuk memantau jumlah kehadiran agar tidak melebihi batas ketidakhadiran yang ditentukan kampus.
 
-![Attendance List](/images/Portal/Timetable.png)
+![Attendance List](/images/portal/Timetable.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Academic Achievement Record atau KHS (Kartu Hasil Studi) adalah fitur yang menampilkan rekap nilai resmi mahasiswa per semester setelah nilai selesai diproses.
 
-![Academic Achievement Record](/images/Portal/Score.png)
+![Academic Achievement Record](/images/portal/Score.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`

@@ -8,7 +8,7 @@ program: "General"
 ## Pengantar
 Transcript adalah fitur yang menampilkan rekap seluruh nilai mata kuliah yang telah ditempuh mahasiswa dari semester pertama hingga semester terakhir.
 
-![Transcript](/images/Portal/Score.png)
+![Transcript](/images/portal/Score.png)
 
 ### Langkah-langkah
 1. Login ke portal di `student.ubm.ac.id`
