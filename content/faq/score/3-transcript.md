@@ -5,8 +5,6 @@ faculty: "General"
 program: "General"
 ---
 
-# Transcript
-
 ## Pengantar
 Transcript adalah fitur yang menampilkan rekap seluruh nilai mata kuliah yang telah ditempuh mahasiswa dari semester pertama hingga semester terakhir.
 

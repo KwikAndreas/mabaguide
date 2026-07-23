@@ -5,8 +5,6 @@ faculty: "General"
 program: "General"
 ---
 
-# Academic Achievement Record (KHS)
-
 ## Pengantar
 Academic Achievement Record atau KHS (Kartu Hasil Studi) adalah fitur yang menampilkan rekap nilai resmi mahasiswa per semester setelah nilai selesai diproses.
 

@@ -5,8 +5,6 @@ faculty: "General"
 program: "General"
 ---
 
-# PPM Score
-
 ## Pengantar
 PPM Score adalah fitur yang menampilkan nilai kegiatan Praktikum/PPM yang telah diikuti mahasiswa.
 

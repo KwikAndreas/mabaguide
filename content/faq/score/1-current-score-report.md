@@ -5,8 +5,6 @@ faculty: "General"
 program: "General"
 ---
 
-# Current Score Report
-
 ## Pengantar
 
 Current Score Report adalah fitur yang menampilkan nilai mata kuliah pada semester yang sedang berjalan. Fitur ini digunakan mahasiswa untuk memantau progres nilai sebelum periode nilai resmi diumumkan.

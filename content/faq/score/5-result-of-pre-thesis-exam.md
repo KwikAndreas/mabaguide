@@ -5,8 +5,6 @@ faculty: "General"
 program: "General"
 ---
 
-# Result of Pre-Thesis Exam (Pra Sidang)
-
 ## Pengantar
 Result of Pre-Thesis Exam adalah fitur yang menampilkan hasil ujian Pra Sidang, yaitu tahap sebelum sidang skripsi akhir.
 
