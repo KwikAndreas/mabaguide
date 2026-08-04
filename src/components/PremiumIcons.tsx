@@ -1,11 +1,19 @@
 import React from 'react';
 
-export const CompassPremium = ({ className }: { className?: string }) => (
+export const CampusPremium = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <circle cx="50" cy="50" r="45" fill="var(--cat-academic, #2563EB)" stroke="currentColor" strokeWidth="4"/>
-    <circle cx="50" cy="50" r="30" fill="var(--background, white)" stroke="currentColor" strokeWidth="4"/>
-    <path d="M48 25L52 25L60 40L75 48L75 52L60 60L52 75H48L40 60L25 52V48L40 40L48 25Z" fill="currentColor"/>
-    <circle cx="50" cy="50" r="5" fill="var(--background, white)" />
+    {/* Base */}
+    <rect x="15" y="70" width="70" height="15" fill="var(--background, white)" stroke="currentColor" strokeWidth="5" />
+    <rect x="25" y="85" width="50" height="5" fill="currentColor" />
+    
+    {/* Pillars */}
+    <rect x="22" y="40" width="10" height="30" fill="var(--background, white)" stroke="currentColor" strokeWidth="4" />
+    <rect x="45" y="40" width="10" height="30" fill="var(--background, white)" stroke="currentColor" strokeWidth="4" />
+    <rect x="68" y="40" width="10" height="30" fill="var(--background, white)" stroke="currentColor" strokeWidth="4" />
+    
+    {/* Roof */}
+    <polygon points="50,15 90,40 10,40" fill="var(--cat-bureaucracy, #EA580C)" stroke="currentColor" strokeWidth="5" strokeLinejoin="miter" />
+    <circle cx="50" cy="27" r="4" fill="var(--background, white)" stroke="currentColor" strokeWidth="2" />
   </svg>
 );
 

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { CompassPremium, PortalPremium, DictionaryPremium } from "@/components/PremiumIcons";
+import { CampusPremium, PortalPremium, DictionaryPremium } from "@/components/PremiumIcons";
 
 export function QuickMenu() {
   return (
@@ -18,7 +18,7 @@ export function QuickMenu() {
               <span className="text-[11px] font-black uppercase tracking-widest text-background mb-2 block bg-foreground w-fit px-2 py-0.5 border-2 border-foreground">Eksplorasi</span>
               <h3 className="text-2xl font-black text-white leading-tight uppercase tracking-tight">Direktori<br/>Kampus</h3>
             </div>
-            <CompassPremium className="w-20 h-20 z-10 text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform duration-500" />
+            <CampusPremium className="w-20 h-20 z-10 text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] group-hover:rotate-12 transition-transform duration-500" />
           </div>
         </Link>
 
