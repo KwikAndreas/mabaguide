@@ -9,9 +9,23 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import CustomCallout from "@/components/markdown/CustomCallout";
 import StickyTOC, { HeadingItem } from "@/components/StickyTOC";
 import rehypeSlug from "rehype-slug";
+import { PieChart } from "@/components/ui/PieChart";
 
 const components = {
   CustomCallout,
+  pre: (props: any) => {
+    const child = props.children;
+    if (child && child.type === 'code' && child.props.className === 'language-piechart') {
+      const content = child.props.children;
+      const lines = content.trim().split('\n');
+      const data = lines.map((line: string) => {
+        const [label, value] = line.split(':');
+        return { label: label?.trim() || '', value: parseFloat(value?.trim() || '0') };
+      }).filter((item: {label: string, value: number}) => !isNaN(item.value));
+      return <PieChart data={data} />;
+    }
+    return <pre {...props} />;
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
@@ -104,7 +118,7 @@ export default async function FAQDetailPage({ params }: { params: Promise<{ slug
             </div>
 
             {/* Article Content */}
-            <article className="prose prose-slate dark:prose-invert prose-lg max-w-none text-foreground mb-16 prose-headings:font-heading prose-headings:text-foreground prose-headings:font-black prose-p:font-sans prose-p:font-medium prose-a:text-cat-academic prose-a:font-bold hover:prose-a:underline hover:prose-a:decoration-2">
+            <article className="prose prose-slate dark:prose-invert prose-lg max-w-none text-foreground mb-16 prose-headings:font-heading prose-headings:text-foreground prose-headings:font-black prose-p:font-sans prose-p:font-medium prose-a:text-cat-academic prose-a:font-bold hover:prose-a:underline hover:prose-a:decoration-2 prose-blockquote:text-foreground prose-blockquote:border-l-4 prose-blockquote:border-foreground prose-blockquote:bg-muted/50 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-xl prose-blockquote:font-bold prose-blockquote:not-italic">
               <MDXRemote 
                 source={faq.content} 
                 components={components}

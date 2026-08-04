@@ -26,28 +26,28 @@ export function PieChart({ data }: PieChartProps) {
   }, [data, total]);
 
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-8 p-8 bg-card border border-border/50 rounded-3xl shadow-sm my-8">
+    <div className="flex flex-col sm:flex-row items-center gap-8 p-8 bg-card border-2 border-foreground rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] my-8 bg-[url('/noise.svg')]">
       {/* Chart */}
       <motion.div 
         initial={{ scale: 0.8, opacity: 0, rotate: -90 }}
         animate={{ scale: 1, opacity: 1, rotate: 0 }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className="relative w-48 h-48 rounded-full border border-border/50 shadow-sm flex-shrink-0"
+        className="relative w-48 h-48 rounded-full border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] flex-shrink-0"
         style={{
           background: `conic-gradient(${conicGradientStr})`,
         }}
       >
         {/* Inner circle for donut effect */}
-        <div className="absolute inset-0 m-auto w-24 h-24 bg-card rounded-full shadow-sm flex items-center justify-center">
-          <span className="text-sm font-bold text-muted-foreground text-center leading-tight">Total<br/><span className="text-foreground text-lg">{total}%</span></span>
+        <div className="absolute inset-0 m-auto w-24 h-24 bg-card rounded-full border-4 border-foreground shadow-[inset_2px_2px_0px_0px_rgba(0,0,0,0.1)] flex items-center justify-center">
+          <span className="text-sm font-black text-muted-foreground text-center leading-tight uppercase tracking-widest">Total<br/><span className="text-foreground text-xl font-heading">{total}%</span></span>
         </div>
       </motion.div>
 
       {/* Legend */}
       <div className="flex flex-col gap-3 flex-1 w-full">
-        <h4 className="font-bold text-foreground mb-2 text-lg">Komposisi Nilai</h4>
+        <h4 className="font-black text-foreground mb-2 text-lg uppercase tracking-tight font-heading">Komposisi Nilai</h4>
         {data.map((item, idx) => (
-          <div key={item.label} className="flex items-center justify-between p-3 border border-border/50 bg-background/50 rounded-xl hover:bg-muted/50 transition-colors">
+          <div key={item.label} className="flex items-center justify-between p-3 border-2 border-foreground bg-background rounded-xl hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] transition-all">
             <div className="flex items-center gap-3">
               <div 
                 className="w-4 h-4 rounded-full shadow-sm" 
@@ -55,7 +55,7 @@ export function PieChart({ data }: PieChartProps) {
               />
               <span className="font-semibold text-foreground text-sm">{item.label}</span>
             </div>
-            <span className="font-bold text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
+            <span className="font-black text-sm bg-foreground text-background px-3 py-1 rounded-md">
               {item.value}%
             </span>
           </div>
