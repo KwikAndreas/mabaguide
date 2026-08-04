@@ -48,7 +48,7 @@ export default function RatingWidget({ articleSlug }: { articleSlug: string }) {
   }
 
   return (
-    <div className="w-full bg-card/80 backdrop-blur-md border border-border/50 shadow-sm rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden">
+    <div className="w-full bg-card border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden bg-[url('/noise.svg')]">
       <AnimatePresence mode="wait">
         {!submitted ? (
           <motion.div
@@ -62,7 +62,7 @@ export default function RatingWidget({ articleSlug }: { articleSlug: string }) {
             <h3 className="font-bold text-lg sm:text-xl text-foreground mb-1">Gimana panduan ini, bantu nggak?</h3>
             <p className="text-sm text-muted-foreground mb-6">Pilih salah satu ya, masukanmu berharga banget!</p>
             
-            <div className="flex justify-center gap-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.9 }}
