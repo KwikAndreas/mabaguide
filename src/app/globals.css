@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  /* Semantic Category Colors */
+  --color-cat-academic: var(--cat-academic);
+  --color-cat-bureaucracy: var(--cat-bureaucracy);
+  --color-cat-organization: var(--cat-organization);
+  --color-cat-dictionary: var(--cat-dictionary);
+  
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space), ui-sans-serif, system-ui;
+  
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Neo-Utility Campus Guide (Light Mode: Warm Paper) */
+  --background: #FBFBF9; /* Warm Paper */
+  --foreground: #1C1917; /* Soft Charcoal */
+
+  /* Semantic UI Colors */
+  --primary: #1C1917; /* Charcoal */
+  --primary-foreground: #FBFBF9;
+
+  --secondary: #E5E5E5; 
+  --secondary-foreground: #1C1917;
+
+  --accent: #F5F5F0; 
+  --accent-foreground: #1C1917;
+
+  --muted: #F5F5F0; 
+  --muted-foreground: #57534E; /* Stone-500 */
+
+  --border: #E5E5E5; /* Light crisp border */
+  
+  --card: #FFFFFF;
+  --card-foreground: #1C1917;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #1C1917;
+
+  /* Category Accents (Solid Pop Colors) */
+  --cat-academic: #2563EB; /* Royal Blue */
+  --cat-bureaucracy: #EA580C; /* Terracotta */
+  --cat-organization: #059669; /* Emerald */
+  --cat-dictionary: #D97706; /* Amber */
+
+  --radius: 0.5rem; /* Sharper neo-utility radius */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Neo-Utility Campus Guide (Dark Mode: Midnight Obsidian) */
+    --background: #0A0A0C; /* Deep Obsidian */
+    --foreground: #FAFAFA; /* Crisp Off-White */
+
+    /* Semantic UI Colors */
+    --primary: #FAFAFA; 
+    --primary-foreground: #0A0A0C;
+
+    --secondary: #18181B; 
+    --secondary-foreground: #FAFAFA;
+
+    --accent: #18181B; 
+    --accent-foreground: #FAFAFA;
+
+    --muted: #18181B; 
+    --muted-foreground: #A1A1AA; /* Zinc-400 */
+
+    --border: #27272A; /* Subtle border */
+    
+    --card: #18181B; /* Solid Dark Surface */
+    --card-foreground: #FAFAFA;
+
+    --popover: #18181B;
+    --popover-foreground: #FAFAFA;
+
+    /* Category Accents - slightly adjusted for dark mode contrast */
+    --cat-academic: #3B82F6; /* Lighter Royal Blue */
+    --cat-bureaucracy: #F97316; /* Lighter Terracotta */
+    --cat-organization: #10B981; /* Lighter Emerald */
+    --cat-dictionary: #F59E0B; /* Lighter Amber */
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
