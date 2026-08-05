@@ -9,7 +9,7 @@ program: "General"
 
 Timetable for Tutor adalah fitur yang menampilkan jadwal khusus bagi mahasiswa yang berperan sebagai tutor atau asisten dosen.
 
-![Timetable for Tutor](/images/portal/Timetable.png)
+![Timetable for Tutor](/images/portal/TimeTable.png)
 
 ### Langkah-langkah
 
