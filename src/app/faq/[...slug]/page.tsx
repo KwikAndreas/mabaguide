@@ -104,7 +104,7 @@ export default async function FAQDetailPage({ params }: { params: Promise<{ slug
                 {faq.title}
               </h1>
 
-              <div className="flex flex-wrap items-center gap-4 text-sm font-bold text-foreground border-y-2 border-foreground py-4 bg-muted/50 px-4 rounded-xl">
+              <div className="flex flex-wrap items-center gap-4 text-sm font-bold text-foreground border-4 border-foreground py-4 bg-background px-4 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] mb-8">
                 <div className="flex items-center gap-2">
                   <CalendarDays size={18} strokeWidth={2.5} />
                   <span>Panduan Terkini</span>

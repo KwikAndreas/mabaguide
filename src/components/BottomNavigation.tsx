@@ -18,7 +18,7 @@ export default function BottomNavigation() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t-2 border-foreground px-4 pb-safe pt-2 sm:hidden transition-colors duration-300">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t-4 border-foreground shadow-[0_-4px_0_0_rgba(0,0,0,1)] dark:shadow-[0_-4px_0_0_rgba(255,255,255,1)] px-4 pb-safe pt-2 sm:hidden transition-colors duration-300">
       <div className="flex justify-between items-center max-w-md mx-auto h-14 relative">
         {navItems.map((item) => {
           const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
@@ -31,7 +31,7 @@ export default function BottomNavigation() {
               className={clsx(
                 "flex flex-col items-center justify-center w-16 h-12 rounded-lg transition-all duration-200 active:scale-95",
                 isActive 
-                  ? "bg-foreground text-background shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]" 
+                  ? "bg-cat-academic text-white border-2 border-foreground shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] scale-105" 
                   : "text-foreground hover:bg-muted font-bold"
               )}
             >
